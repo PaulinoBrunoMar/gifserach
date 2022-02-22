@@ -6,7 +6,7 @@ export default function Render({ quest }) {
     return quest.map((i) => {
       return (
         <S.GifDiv key={i.id}>
-          <img src={i.images.fixed_height.url} />
+          <img src={i.images.fixed_height.url} alt="gif" />
         </S.GifDiv>
       );
     });
