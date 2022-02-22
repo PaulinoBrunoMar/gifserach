@@ -8,17 +8,14 @@ function App() {
     "https://api.giphy.com/v1/gifs/search?api_key=IHbLnt1oSOTtZEs5Ep7SzQ1kM29baRrh&q=";
 
   const [gifs, setGifs] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
 
   const searchGif = async (dataSearch) => {
     // eslint-disable-next-line no-restricted-globals
     event.preventDefault();
     try {
-      setLoading(true);
       const result = await fetch(GIPHY_API + dataSearch);
       const resultData = await result.json();
       setGifs(resultData.data);
-      setLoading(false);
     } catch (e) {
       alert(e);
     }
