@@ -2,8 +2,6 @@ import React from "react";
 import * as S from "./style";
 
 export default function Render({ quest }) {
-  const [copy, setCopy] = React.useState("");
-
   const renderGifs = () => {
     return quest.map((i) => {
       return (
