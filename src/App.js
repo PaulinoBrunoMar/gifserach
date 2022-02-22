@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/header";
+import Render from "./components/body";
+import GlobalStyle from "./styles/global";
 
 function App() {
+  const GIPHY_API =
+    "https://api.giphy.com/v1/gifs/search?api_key=IHbLnt1oSOTtZEs5Ep7SzQ1kM29baRrh&q=";
+
+  const [gifs, setGifs] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+
+  const searchGif = async (dataSearch) => {
+    // eslint-disable-next-line no-restricted-globals
+    event.preventDefault();
+    try {
+      setLoading(true);
+      const result = await fetch(GIPHY_API + dataSearch);
+      const resultData = await result.json();
+      setGifs(resultData.data);
+      setLoading(false);
+    } catch (e) {
+      alert(e);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle />
+      <Header onDataUser={searchGif} />
+      <Render quest={gifs} />
     </div>
   );
 }
