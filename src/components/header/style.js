@@ -33,9 +33,16 @@ export const Button = styled.button`
   border-radius: 5px;
   margin-top: 5px;
   margin-left: 5px;
+  cursor: pointer;
   @media (max-width: 800px) {
     padding: 10px;
     margin-top: 10px;
+  }
+  &:hover {
+    background-color: #b87d4b;
+    border: 3px solid #f2dd6e;
+    color: #f2dd6e;
+    box-shadow: 10px 10px 10px #b87d4b;
   }
 `;
 

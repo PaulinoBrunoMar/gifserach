@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import * as S from "./style";
 
-export default function Render({ quest }) {
+export default function Body({ quest }) {
   const renderGifs = () => {
     return quest.map((i) => {
       return (
-        <S.GifDiv key={i.id}>
-          <img src={i.images.fixed_height.url} alt="gif" />
+        <S.GifDiv src={i.images.fixed_height.url} key={i.id}>
+          <CopyToClipboard
+            text={"https://media.giphy.com/media/" + i.id + "/giphy.gif"}
+          >
+            <S.Button>Copy</S.Button>
+          </CopyToClipboard>
         </S.GifDiv>
       );
     });

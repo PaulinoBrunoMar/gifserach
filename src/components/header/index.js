@@ -15,6 +15,7 @@ export default function Header({ onDataUser }) {
       <S.Subtittle>Because a gif is worth a thousand words!</S.Subtittle>
       <form onSubmit={sendData}>
         <S.Input
+          autoFocus
           type="text"
           placeholder="Search GIF"
           onChange={(e) => setSearch(e.target.value)}
