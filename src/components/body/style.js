@@ -7,10 +7,10 @@ export const BodyDiv = styled.div`
   flex-wrap: wrap;
   background-color: #f2dd6e;
   @media (max-width: 1200px) {
-    padding-top: 260px;
+    padding-top: 280px;
   }
   @media (max-width: 600px) {
-    padding-top: 200px;
+    padding-top: 255px;
   }
 `;
 

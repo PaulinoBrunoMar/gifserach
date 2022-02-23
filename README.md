@@ -4,11 +4,11 @@
 
 ## Desktop view
 
-<img src="https://i.ibb.co/6XRFMCc/desktop-view.png" alt="desktop-view" border="0">
+<img src="https://i.ibb.co/6XRFMCc/desktop-view.png" alt="desktop-view">
 
 ## Mobile View
 
-<img src="https://i.ibb.co/3pLX0LL/mobile-view.png" alt="mobile-view" border="0">
+<img src="https://i.ibb.co/3pLX0LL/mobile-view.png" alt="mobile-view">
 
 ### Visit my APP
 
