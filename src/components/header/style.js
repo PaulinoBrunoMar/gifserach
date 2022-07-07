@@ -58,8 +58,3 @@ export const Logo = styled.div`
   color: #b87d4b;
   display: inline-block;
 `;
-
-export const Subtittle = styled.p`
-  padding: 3px;
-  color: #383737;
-`;
